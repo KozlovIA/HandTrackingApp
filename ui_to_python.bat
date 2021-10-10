@@ -1,0 +1,1 @@
+pyside6-uic "HandControl.ui" -o "gui/HCapp_ui.py"
