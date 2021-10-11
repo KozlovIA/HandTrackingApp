@@ -17,13 +17,20 @@ def main():
     main_window.show()
 
     #   функционал
-    #ui.default_button.clicked.connect(test)
-    # ui.switch_HC_control.isChecked()
-    ui.StartButton.clicked.connect(test)
+    ui.StartButton.clicked.connect(Start)
+    ui.FinishButton.clicked.connect(Finish)
 
     RetCode = app.exec()
     sys.exit(RetCode)
 
+
+def Start():
+    ui.WorkText.setText("Programm is worked")
+    HCfunc.HandControlStart(ui.CameraIndex.value(), ui.videoChecker.isChecked())
+
+def Finish():
+    ui.WorkText.setText("Добби свободен")
+    HCfunc.HandControlFinish()
 
 def test():
     #ui.lineEdit.setText("Let's get this fire started")
